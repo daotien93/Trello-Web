@@ -1,10 +1,5 @@
 import './App.css'
-import Button from '@mui/material/Button'
-import React from 'react'
-import {
-  useColorScheme
-} from '@mui/material/styles'
-import { MenuItem, FormControl, InputLabel, Select } from '@mui/material'
+import { MenuItem, FormControl, InputLabel, Select, Container, Box } from '@mui/material'
 
 function ModelSelect() {
   const handleChange = () => {
@@ -24,27 +19,40 @@ function ModelSelect() {
   </Select>
 </FormControl>
 }
-function ModeToggle() {
-  const { mode, setMode } = useColorScheme();
-  return (
-    <Button
-      onClick={() => {
-        setMode(mode === 'light' ? 'dark' : 'light')
-      }}
-    >
-      {mode === 'light' ? 'Turn dark' : 'Turn light'}
-    </Button>
-  );
-}
 
 function App() {
   return (
-    <React.Fragment>
-      <ModelSelect />
-      <ModeToggle />
-      <hr/>
-      <Button variant='contained'>Click buy smart phone</Button>
-    </React.Fragment>
+    <Container disableGutters maxWidth={false} sx={{ height: '100vh', backgroundColor: 'primary.main'}} >
+      <Box sx={{ 
+        backgroundColor: 'primary.light',
+        width: '100%',
+        height: (theme) => theme.trello.appBarHeight,
+        display: 'flex',
+        alignItems: 'center'
+      }}>
+          <ModelSelect />
+      </Box>
+
+      <Box sx={{ 
+        backgroundColor: 'primary.dark',
+        width: '100%',
+        height: (theme) => theme.trello.boardBarHeigh,
+        display: 'flex',
+        alignItems: 'center'
+      }}>
+          Board Bar
+      </Box>
+
+      <Box sx={{ 
+        backgroundColor: 'primary.main',
+        width: '100%',
+        height: (theme) => `calc(100vh - ${theme.trello.appBarHeight} - ${theme.trello.boardBarHeigh})`,
+        display: 'flex',
+        alignItems: 'center'
+      }}>
+          Board Content
+      </Box>
+    </Container>
   )
 }
 
