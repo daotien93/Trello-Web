@@ -14,6 +14,7 @@ module.exports = {
     'react-hooks',
     'react-refresh'
   ],
+  // Mui
   rules: {
     'react-refresh/only-export-components': 'warn',
     'react-hooks/rules-of-hooks': 'error',
@@ -21,6 +22,13 @@ module.exports = {
     'react/prop-types': 0,
     'react/display-name': 0,
 
+    'no-restricted-imports': [
+      'error',
+      {
+        'patterns': ['@mui/*/*/*']
+      }
+    ],
+    // Common
     'no-console': 1,
     'no-lonely-if': 1,
     'no-unused-vars': 1,
