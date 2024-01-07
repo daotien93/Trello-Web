@@ -3,7 +3,7 @@ import Container from '@mui/material/Container'
 const Board = () => {
   return (
     <Container>
-      <p>Code Javasci</p>
+      <p>Code Javascripts</p>
     </Container>
   )
 }
