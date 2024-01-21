@@ -55,7 +55,7 @@ function ModelSelect() {
 function ModeToggle() {
   const { mode, setMode } = useColorScheme()
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
-  const prefersLighMode = useMediaQuery('(prefers-color-scheme: light)')
+  const prefersLightMode = useMediaQuery('(prefers-color-scheme: light)')
 
   return (
     <Button
