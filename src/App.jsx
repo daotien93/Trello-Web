@@ -2,7 +2,7 @@ import React from 'react'
 import Board from './pages/Bords/_id'
 import Button from '@mui/material/Button'
 import { useColorScheme } from '@mui/material/styles'
-import useMediaQuery from '@mui/material/useMediaQuery'
+//import useMediaQuery from '@mui/material/useMediaQuery'
 
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
@@ -54,8 +54,8 @@ function ModelSelect() {
 
 function ModeToggle() {
   const { mode, setMode } = useColorScheme()
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
-  const prefersLightMode = useMediaQuery('(prefers-color-scheme: light)')
+  //const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
+  //const prefersLightMode = useMediaQuery('(prefers-color-scheme: light)')
 
   return (
     <Button
